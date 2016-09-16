@@ -17,10 +17,10 @@ using namespace std;
 
 int main(int argc, char *argv[]){
 
-    double dt = 1*pow(10,-6);
+    double dt = 1*pow(10,-7);
     unsigned int numberOfTimeSteps = 10000000;
     unsigned int outputFrequency = 1000;
-    unsigned int numberOfNodes = 2;
+    unsigned int numberOfNodes = 100;
     double drivingVelocity = 0.01;
     double slope = 0;//M_PI/8;
     double sliderLength = 0.1;
@@ -112,7 +112,7 @@ int main(int argc, char *argv[]){
         cout << i*outputFrequency*dt << "/" << numberOfTimeSteps*dt << endl;
 
 
-        if(i==50000){
+        if(i==5000){
             nodes[0]->setVelocity(nodes[0]->getVelocity()*2);
         }
 
