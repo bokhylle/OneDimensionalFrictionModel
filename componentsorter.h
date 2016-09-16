@@ -1,11 +1,15 @@
-#ifndef COMPONENTSORTERS_H
-#define COMPONENTSORTERS_H
+#ifndef COMPONENTSORTER_H
+#define COMPONENTSORTER_H
+#include "nodecomponent.h"
+#include <vector>
 
-
-class ComponentSorters
+class ComponentSorter
 {
 public:
-    ComponentSorters();
+    ComponentSorter();
+    bool operator() (shared_ptr<NodeComponent> a, shared_ptr<NodeComponent> b) {
+        return a->getNodePriority() < b->getNodePriority();
+    }
 };
 
-#endif // COMPONENTSORTERS_H
+#endif // COMPONENTSORTER_H

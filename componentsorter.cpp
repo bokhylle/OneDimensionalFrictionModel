@@ -1,6 +1,6 @@
-#include "componentsorters.h"
+#include "componentsorter.h"
 
-ComponentSorters::ComponentSorters()
+ComponentSorter::ComponentSorter()
 {
 
 }
